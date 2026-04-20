@@ -1,0 +1,3187 @@
+<!doctype html>
+<html lang="en" v="1.1.3">
+
+
+<!-- Mirrored from gameapp.playgamedaily.com/explore/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Apr 2026 04:14:33 GMT -->
+<head>
+<script src="../site-config.js"></script>  
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <meta data-n-head="true" name="viewport"
+    content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+  <title>Play & Download Top Free Mobile Games | {{DOMAIN_NAME}}</title>
+  <meta name="keywords"
+    content="Top Free Games for Phones, Popular Game Downloads, Action-Packed Mobile Titles, Strategic Gameplay Apps, Brain Teaser Games, High-Speed Racing Apps, Games for Kids and Teens, Cooking and Dress-Up Games, Thrilling Adventures, {{DOMAIN_NAME}}" />
+  <meta name="description"
+    content="Play and download the best free mobile games at {{DOMAIN_NAME}}! Enjoy action, racing, puzzle, cooking games, and more—fun for all ages and interests." />
+
+  <script async src="../../securepubads.g.doubleclick.net/tag/js/f.txt" crossorigin="anonymous"></script>
+  <script>
+
+    window.googletag = window.googletag || { cmd: [] }
+    let interstitialSlot
+
+    googletag.cmd.push(() => {
+      // ✅ Define interstitial slot
+      interstitialSlot = googletag.defineOutOfPageSlot(
+        window.AD_CONFIG.inter,
+        googletag.enums.OutOfPageFormat.INTERSTITIAL
+      )
+
+      if (interstitialSlot) {
+        interstitialSlot.addService(googletag.pubads())
+      }
+
+      googletag.enableServices()
+
+      // ✅ Preload the interstitial ad immediately after page load
+      if (interstitialSlot) {
+        googletag.display(interstitialSlot)
+      }
+    })
+
+    // ✅ Function to show interstitial and then call callback
+    function showInterstitialAd(callback) {
+      googletag.cmd.push(() => {
+        if (interstitialSlot) {
+          googletag.pubads().display(interstitialSlot)
+        }
+        // ⏳ Fast fallback: max wait 500ms
+        setTimeout(() => {
+          if (typeof callback === 'function') callback()
+        }, 500)
+      })
+    }
+  </script>
+
+  <style>
+    #link {
+      display: none;
+    }
+
+    div.content {
+      position: fixed;
+      top: 50%;
+    }
+  </style>
+
+  <style>
+    .ads,
+    .ads-prompt,
+    .grid-warp {
+      margin: 0 auto;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family:
+        Helvetica Neue,
+        Helvetica,
+        PingFang SC,
+        Hiragino Sans GB,
+        Microsoft YaHei,
+        \\5FAE\8F6F\96C5\9ED1,
+        Arial,
+        sans-serif;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .ads {
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ads-prompt {
+      font-size: 12px;
+      color: #d5c5c5;
+      font-family: auto;
+    }
+
+    .game-item-title,
+    .game-title {
+      color: #fff;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .adsbygoogle[data-ad-status='unfilled'] {
+      display: none !important;
+    }
+
+    .game-list li a,
+    .game-list-warp .game-link {
+      display: block;
+      transition: 0.2s;
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      background-color: #838fff;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .index-content {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .game-list li img {
+      border-radius: 16px;
+      width: 100%;
+    }
+
+    .game-title {
+      display: none;
+      --fontSize: 12px;
+      --lineHeight: 16px;
+      --bezier: cubic-bezier(0.25, 0.1, 0.25, 1);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 6px;
+      font:
+        700 var(--fontSize)/var(--lineHeight) 'Proxima Nova',
+        sans-serif;
+      z-index: 5;
+      transition:
+        transform 0.3s var(--bezier) 0.1s,
+        opacity 0.3s var(--bezier) 0.1s;
+      transform: translate(0, 10px);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .game-list li a:hover span {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+
+    .game-list li:first-child a {
+      grid-area: ip0/ip0/ip0/ip0;
+    }
+
+    .game-list li:nth-child(2) a {
+      grid-area: ip1/ip1/ip1/ip1;
+    }
+
+    @media (min-width: 104px) and (max-width: 543px) {
+      .game-list-warp {
+        grid-template: auto/auto;
+        grid-template-areas: 'ip0 ip0 .' 'ip0 ip0 .' '. ip1 ip1' '. ip1 ip1';
+      }
+    }
+
+    @media (min-width: 544px) and (max-width: 763px) {
+      .game-list-warp {
+        grid-template: auto/auto;
+        --gridTemplateColumns: 5;
+        grid-template-areas: '. . . ip0 ip0' '. . . ip0 ip0' 'ip1 ip1 . . .' 'ip1 ip1 . . .';
+      }
+    }
+
+    @media (min-width: 764px) and (max-width: 1204px) {
+      .game-list-warp {
+        --gridTemplateColumns: 7;
+        grid-template-areas: '. ip0 ip0 ip0 . . .' '. ip0 ip0 ip0 . . .' '. ip0 ip0 ip0 . . .' '. . . . ip1 ip1 ip1' '. . . . ip1 ip1 ip1' '. . . . ip1 ip1 ip1';
+      }
+    }
+
+    .game-list-warp {
+      display: grid;
+      grid-auto-rows: calc(100vw / var(--gridTemplateColumns) - 16px - 2px);
+      grid-gap: 16px;
+      grid-auto-flow: dense;
+      justify-content: center;
+      margin: 16px auto;
+      padding: 0;
+      list-style-type: none;
+      grid-template-columns: repeat(var(--gridTemplateColumns),
+          calc(100vw / var(--gridTemplateColumns) - 16px - 2px));
+    }
+
+    .game-list,
+    .game-list li {
+      display: contents;
+    }
+
+    .game-list-warp .game-link {
+      border-radius: 16px;
+      box-shadow: #0000003d 0 6px 12px 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .game-item-shadow,
+    .game-item-title,
+    .loader,
+    .text {
+      position: absolute;
+    }
+
+    .game-list li {
+      border-radius: 16px;
+    }
+
+    .game-list li a:hover {
+      z-index: 1000;
+      transform: scale(1.03) translateY(-5px);
+    }
+
+    .game-list-warp .game-img {
+      border-radius: 16px;
+      width: 100%;
+      min-width: 94px;
+      min-height: 94px;
+    }
+
+    .game-list-warp .loading-img {
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      top: 50%;
+      bottom: 50%;
+    }
+
+    @media (min-width: 104px) and (max-width: 543px) {
+      .grid-warp {
+        width: 100%;
+      }
+
+      .game-list-warp {
+        --gridTemplateColumns: 3;
+      }
+    }
+
+    @media (min-width: 544px) and (max-width: 763px) {
+      .grid-warp {
+        width: 100%;
+      }
+
+      .game-list-warp {
+        --gridTemplateColumns: 5;
+      }
+    }
+
+    @media (min-width: 764px) and (max-width: 1204px) {
+      .grid-warp {
+        width: 100%;
+      }
+
+      .game-list-warp {
+        --gridTemplateColumns: 7;
+      }
+    }
+
+    @media (min-width: 1204px) and (max-width: 1313px) {
+      .game-list-warp {
+        grid-template-areas: '. . . . ip0 ip0 ip0 . . .' '. ip1 ip1 ip1 ip0 ip0 ip0 . . .' '. ip1 ip1 ip1 ip0 ip0 ip0 . . .' '. ip1 ip1 ip1 . . . . . .';
+        --gridTemplateColumns: 11;
+      }
+
+      .grid-warp {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1314px) and (max-width: 1533px) {
+      .game-list-warp {
+        grid-template-areas: '. . . . ip0 ip0 ip0 . . ip1 ip1 ip1' '. . . . ip0 ip0 ip0 . . ip1 ip1 ip1' '. . . . ip0 ip0 ip0 . . ip1 ip1 ip1';
+        --gridTemplateColumns: 12;
+      }
+
+      .grid-warp {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1534px) and (max-width: 1863px) {
+      .game-list-warp {
+        grid-template-areas: '. . . . ip0 ip0 ip0 . . . . ip1 ip1 ip1' '. . . . ip0 ip0 ip0 . . . . ip1 ip1 ip1' '. . . . ip0 ip0 ip0 . . . . ip1 ip1 ip1';
+        --gridTemplateColumns: 14;
+      }
+
+      .grid-warp {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1864px) {
+      .game-list-warp {
+        grid-template-areas: '. . . . ip0 ip0 ip0 . . . . ip1 ip1 ip1 . . .' '. . . . ip0 ip0 ip0 . . . . ip1 ip1 ip1 . . .' '. . . . ip0 ip0 ip0 . . . . ip1 ip1 ip1 . . .';
+        --gridTemplateColumns: 17;
+      }
+
+      .grid-warp {
+        width: 100%;
+      }
+    }
+
+    .lazy-load {
+      display: none;
+    }
+
+    .game-item-title {
+      bottom: 10px;
+      font-size: 14px;
+      margin: 0;
+      width: 100%;
+      z-index: 5003;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .game-item-shadow {
+      background: linear-gradient(0deg,
+          rgba(0, 0, 0, 0.5) 0,
+          transparent 50%);
+      border-radius: 8px;
+      bottom: 0;
+      display: none;
+      height: 100%;
+      width: 100%;
+      z-index: 5002;
+    }
+
+    @media screen and (min-width: 768px) {
+      .game-list-warp .game-list .game-link:hover .game-item-title {
+        opacity: 1;
+      }
+
+      .game-list-warp .game-list .game-link:hover .game-item-shadow {
+        border: 2px solid #fff;
+        display: block;
+      }
+    }
+
+    .game-link .loading-img {
+      background: #fff !important;
+    }
+
+    .loader {
+      height: 5px;
+      width: 1px;
+      -webkit-animation: 3.5s linear infinite rotate0234;
+      animation: 3.5s linear infinite rotate0234;
+    }
+
+    .loader .dot {
+      top: 15px;
+      height: 7px;
+      width: 7px;
+      background: #268fe4;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .text {
+      bottom: -85px;
+      font-size: 25px;
+      font-weight: 400;
+      color: #26aee4;
+    }
+
+    @-webkit-keyframes rotate0234 {
+      30% {
+        transform: rotate(220deg);
+      }
+
+      40% {
+        transform: rotate(450deg);
+        opacity: 1;
+      }
+
+      75% {
+        transform: rotate(720deg);
+        opacity: 1;
+      }
+
+      76% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+        transform: rotate(0);
+      }
+    }
+
+    @keyframes rotate0234 {
+      30% {
+        transform: rotate(220deg);
+      }
+
+      40% {
+        transform: rotate(450deg);
+        opacity: 1;
+      }
+
+      75% {
+        transform: rotate(720deg);
+        opacity: 1;
+      }
+
+      76% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+        transform: rotate(0);
+      }
+    }
+
+    .loader:first-child {
+      -webkit-animation-delay: 0.15s;
+      animation-delay: 0.15s;
+    }
+
+    .loader:nth-child(2) {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    .loader:nth-child(3) {
+      -webkit-animation-delay: 0.45s;
+      animation-delay: 0.45s;
+    }
+
+    .loader:nth-child(4) {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+
+    .loader:nth-child(5) {
+      -webkit-animation-delay: 0.75s;
+      animation-delay: 0.75s;
+    }
+
+    .loader:nth-child(6) {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+    }
+
+    footer {
+      padding-bottom: 24px;
+    }
+
+    footer .line {
+      width: 95%;
+      max-width: 1150px;
+      height: 1px;
+      background-color: #eee;
+      margin: 0 auto 24px;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      color: #e0e0e0;
+    }
+
+    .introduce {
+      text-align: center;
+      color: #b9b9b9;
+    }
+
+    .footer-content {
+      position: relative;
+      width: 85%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="index-content">
+    <section class="icon-group" id="iconGroup">
+         <div style="display: flex; justify-content: center;">
+            <div id="myw_top_1"></div>
+        </div>
+      <div class="grid-warp">
+        <div class="game-list-warp">
+          <ul class="game-list">
+            <li>
+              <a class="game-link" href="detail/37.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609390050168217601460939000482779136.jpg" />
+
+                  <h2 class="game-item-title">Roblox</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20371.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/146969865456624025620260207-061744925APWE-256x256.jpg" />
+
+                  <h2 class="game-item-title">Fortnite</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/52.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609471739062067201460947164515160064.jpg" />
+
+                  <h2 class="game-item-title">Minecraft: Dream it, Build it!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60068.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475676228744847361447567605883359232.jpg" />
+
+                  <h2 class="game-item-title">Poppy Playtime Chapter 1</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20255.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609499920003440641460949974220689408.jpg" />
+
+                  <h2 class="game-item-title">Toca Boca World</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72370.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609518837698600961460951866866814976.jpg" />
+
+                  <h2 class="game-item-title">School Party Craft</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60067.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475719313767997441447571922950443008.jpg" />
+
+                  <h2 class="game-item-title">Five Nights at Freddy's</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70498.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475457037563535361447545698911932416.jpg" />
+
+                  <h2 class="game-item-title">The Baby In Yellow</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/285.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059512580324925441405951239787270144.jpg" />
+
+                  <h2 class="game-item-title">Gangster City: Mafia Crime</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/10.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475692566859161601447569243532578816.jpg" />
+
+                  <h2 class="game-item-title">Call of Duty®: Mobile</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/503.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475640286537523201447564020227395584.jpg" />
+
+                  <h2 class="game-item-title">Grand Theft Auto: San Andreas</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60993.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609509830976020481460950964860768256.jpg" />
+
+                  <h2 class="game-item-title">Avatar World ®</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20265.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609462805572034561460946259417911296.jpg" />
+
+                  <h2 class="game-item-title">Granny</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a class="game-link" href="detail/70262.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475737603240304641447573743513260032.jpg" />
+
+                  <h2 class="game-item-title">Ultimate Custom Night</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/61120.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475701575678894081447570135380021248.jpg" />
+
+                  <h2 class="game-item-title">Free Fire</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72535.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609399716528988161460939953617391616.jpg" />
+
+                  <h2 class="game-item-title">I Am Security</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72536.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609490996453908481460949078506098688.jpg" />
+
+                  <h2 class="game-item-title">I Am Cat</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70264.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475658271545303041447565814437400576.jpg" />
+
+                  <h2 class="game-item-title">Five Nights at Freddy's 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60505.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609444957885767681460944482417135616.jpg" />
+
+                  <h2 class="game-item-title">Geometry Dash Lite</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/5.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475394715700633601447539466255880192.jpg" />
+
+                  <h2 class="game-item-title">Dude Theft Wars FPS Open world</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70459.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14606910718724218881460691054956793856.jpg" />
+
+                  <h2 class="game-item-title">Purple Monster Chapter 3</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/61119.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610491081685934081461049090045005824.jpg" />
+
+                  <h2 class="game-item-title">Free Fire MAX x JUJUTSU KAISEN</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70446.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609417142352158721460941709147525120.jpg" />
+
+                  <h2 class="game-item-title">Build A Queen</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70370.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059650167547043841405964999138627584.jpg" />
+
+                  <h2 class="game-item-title">Little Nightmares</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/25.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475728755523788801447572867042136064.jpg" />
+
+                  <h2 class="game-item-title">PUBG MOBILE</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20548.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475709877003427841447570974458925056.jpg" />
+
+                  <h2 class="game-item-title">Royal Match</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70256.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475421454975836161447542136983146496.jpg" />
+
+                  <h2 class="game-item-title">Poppy Playtime Chapter 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/2.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059330551767572481405933037317410816.jpg" />
+
+                  <h2 class="game-item-title">Clash of Clans</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70010.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609454066068561921460945384880361472.jpg" />
+
+                  <h2 class="game-item-title">Melon Sandbox</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/4.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610454619301027841461045456624308224.jpg" />
+
+                  <h2 class="game-item-title">Genshin Impact</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72436.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/13472240993531535361347224094135439360.jpg" />
+
+                  <h2 class="game-item-title">Horror Spranky Beats</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70273.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059641224452055041405964117642727424.jpg" />
+
+                  <h2 class="game-item-title">Hitman Sniper</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72435.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load" data-load="../../resc.pocketapk.com/images/72435/logo_pad.jpg" />
+                  <h2 class="game-item-title">Monkey Had</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70452.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475620972732293121447562075160858624.jpg" />
+
+                  <h2 class="game-item-title">Spider Fighting: Hero Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/194.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475403764492083201447540362847080448.jpg" />
+
+                  <h2 class="game-item-title">Ball Run 2048: merge number</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70430.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609534474609172481460953425474375680.jpg" />
+
+                  <h2 class="game-item-title">Avatar Maker Dress up for kids</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70458.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609542409980682241460954219309322240.jpg" />
+
+                  <h2 class="game-item-title">Spider Fighter 3: Action Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70258.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059634035163340801405963399280087040.jpg" />
+
+                  <h2 class="game-item-title">Papa's Freezeria To Go!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70332.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059645839444746241405964570690473984.jpg" />
+
+                  <h2 class="game-item-title">Vector Classic</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70331.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059644874041794561405964465304391680.jpg" />
+
+                  <h2 class="game-item-title">Poly Bridge 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70019.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059631167014379521405963098749816832.jpg" />
+
+                  <h2 class="game-item-title">Honkai: Star Rail</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/8.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475439385247948801447543916718608384.jpg" />
+
+                  <h2 class="game-item-title">Mario Kart Tour</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60404.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059594017392762881405959388334280704.jpg" />
+
+                  <h2 class="game-item-title">Brawl Stars</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70353.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475611519484108801447561133854183424.jpg" />
+
+                  <h2 class="game-item-title">Garten of Banban 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/265.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609481650747678721460948159752196096.jpg" />
+
+                  <h2 class="game-item-title">Sandwich Runner</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/22011.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609436184408432641460943608802332672.jpg" />
+
+                  <h2 class="game-item-title">Mega Car Crash Simulator</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60800.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059606420201349121405960636395573248.jpg" />
+
+                  <h2 class="game-item-title">PUBG MOBILE LITE</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70429.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475630138754539521447563000441098240.jpg" />
+
+                  <h2 class="game-item-title">Aha World: Doll Dress-Up Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/66.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475466780428410881447546656203100160.jpg" />
+
+                  <h2 class="game-item-title">My Talking Tom 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72395.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610575530389872641461057544591659008.jpg" />
+
+                  <h2 class="game-item-title">Block Craft 3D：Building Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70490.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613150590027898881461315044918317056.jpg" />
+
+                  <h2 class="game-item-title">Garten of Banban 7</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20312.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059559730383626241405955964465205248.jpg" />
+
+                  <h2 class="game-item-title">Among Us</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20247.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059540695667384321405954056862191616.jpg" />
+
+                  <h2 class="game-item-title">Stumble Guys</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72410.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059703200075161601405970307302969344.jpg" />
+
+                  <h2 class="game-item-title">Dark War Survival</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/167.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613020681318113281461302049525878784.jpg" />
+
+                  <h2 class="game-item-title">Car Race</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70433.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613160021214044161461315993200119808.jpg" />
+
+                  <h2 class="game-item-title">Gabbys Dollhouse: Games &amp; Cats</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70451.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059666981589032961405966692957966336.jpg" />
+
+                  <h2 class="game-item-title">Agent Hunt – Hitman Shooter</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/1.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059329924048035841405932987069648896.jpg" />
+
+                  <h2 class="game-item-title">Pokémon UNITE</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72348.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059686820856668161405968660287868928.jpg" />
+
+                  <h2 class="game-item-title">Snake.io - Fun Snake .io Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72377.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059696391713136641405969621609762816.jpg" />
+
+                  <h2 class="game-item-title">Toca Boca Jr</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/30.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059354345592791041405935429672914944.jpg" />
+
+                  <h2 class="game-item-title">Geometry Dash</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70009.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610557051712512001461055700003868672.jpg" />
+
+                  <h2 class="game-item-title">Subway Surfers</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70406.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059656965549137921405965679295352832.jpg" />
+
+                  <h2 class="game-item-title">Sonic Forces: PvP Battle Race</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70477.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059673507045253121405967340684333056.jpg" />
+
+                  <h2 class="game-item-title">SpongeBob - The Cosmic Shake</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/145.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610354380468592641461035432254525440.jpg" />
+
+                  <h2 class="game-item-title">Bridge Race</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70515.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613039348361666561461303929782030336.jpg" />
+
+                  <h2 class="game-item-title">Hill Climb Racing 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/129.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059398828954951681405939877879107584.jpg" />
+
+                  <h2 class="game-item-title">Talking Tom Hero Dash: Ladybug</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72405.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475412520269455361447541234272456704.jpg" />
+
+                  <h2 class="game-item-title">Hair Salon: Beauty Salon Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70279.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613178730703953921461317856007966720.jpg" />
+
+                  <h2 class="game-item-title">FNaF 6: Pizzeria Simulator</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/273.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059502445879828481405950239168942080.jpg" />
+
+                  <h2 class="game-item-title">Talking Tom Gold Run</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72354.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613029713584005121461302958641270784.jpg" />
+
+                  <h2 class="game-item-title">Race Master 3D: Car Racing</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/65.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610345213062225921461034516981895168.jpg" />
+
+                  <h2 class="game-item-title">My Talking Tom</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20317.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059562529829888001405956239548633088.jpg" />
+
+                  <h2 class="game-item-title">Pokémon GO</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70008.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059620271512821761405962010172739584.jpg" />
+
+                  <h2 class="game-item-title">Magic Tiles 3™ - Piano Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70268.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059638899297689601405963867838369792.jpg" />
+
+                  <h2 class="game-item-title">RFS - Real Flight Simulator</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72343.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059685902639636481405968568558440448.jpg" />
+
+                  <h2 class="game-item-title">Super Mario Run</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/502.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059528540742164481405952836453945344.jpg" />
+
+                  <h2 class="game-item-title">Terraria</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20546.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059567518996439041405956729770496000.jpg" />
+
+                  <h2 class="game-item-title">MONOPOLY GO!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20582.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059572072165089281405957193538883584.jpg" />
+
+                  <h2 class="game-item-title">Township</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70400.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059654973883883521405965488165113856.jpg" />
+
+                  <h2 class="game-item-title">Garten of Banban 4</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20229.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059538416566476801405953833058324480.jpg" />
+
+                  <h2 class="game-item-title">Coin Master</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70414.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059659449625681921405965940277530624.jpg" />
+
+                  <h2 class="game-item-title">Hello Neighbor Nicky's Diaries</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70526.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059679585304780801405967949021990912.jpg" />
+
+                  <h2 class="game-item-title">Miga Town</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70386.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059653103811502081405965288205864960.jpg" />
+
+                  <h2 class="game-item-title">Garten of Banban 3</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70453.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059668683763425281405966854426087424.jpg" />
+
+                  <h2 class="game-item-title">Frontline Heroes: WW2 Warfare</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/40.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059363543240089601405936349110489088.jpg" />
+
+                  <h2 class="game-item-title">Need for Speed™ No Limits</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70505.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059677290097745921405967715260846080.jpg" />
+
+                  <h2 class="game-item-title">Motocross Bike Racing Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20549.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059569341505413121405956920313532416.jpg" />
+
+                  <h2 class="game-item-title">Clash Royale</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70267.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059637813644042241405963759927316480.jpg" />
+
+                  <h2 class="game-item-title">Farming Simulator 23 Mobile</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70379.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059652110684200961405965189090267136.jpg" />
+
+                  <h2 class="game-item-title">Goat Simulator 3</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70397.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059654072444067841405965385371111424.jpg" />
+
+                  <h2 class="game-item-title">Farming Simulator 20</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72428.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059717545853132801405971750244208640.jpg" />
+
+                  <h2 class="game-item-title">Shadow Fight 4: Arena</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70377.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059651198297251841405965102377226240.jpg" />
+
+                  <h2 class="game-item-title">LEGO ® Batman: Beyond Gotham</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/75.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059395210109460481405939499854876672.jpg" />
+
+                  <h2 class="game-item-title">Space shooter - Galaxy attack</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72384.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059697263289507841405969717403471872.jpg" />
+
+                  <h2 class="game-item-title">Sniper 3D：Gun Shooting Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/261.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610528945387806721461052872170557440.jpg" />
+
+                  <h2 class="game-item-title">Pure Sniper: Gun Shooter Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20348.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059565010886533121405956487117426688.jpg" />
+
+                  <h2 class="game-item-title">NBA LIVE Mobile Basketball</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/198.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059444607602073601405944438404567040.jpg" />
+
+                  <h2 class="game-item-title">Extreme Car Driving Simulator</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72364.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059690589229096961405969050047762432.jpg" />
+
+                  <h2 class="game-item-title">EA SPORTS FC™ Mobile Soccer</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70527.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059680591686082561405968049823698944.jpg" />
+
+                  <h2 class="game-item-title">Miga Town: My World</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/262.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059494321512980481405949418477867008.jpg" />
+
+                  <h2 class="game-item-title">Temple Run 2: Endless Escape</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70356.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059648058315448321405964783907917824.jpg" />
+
+                  <h2 class="game-item-title">Garten of Banban 6</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70432.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/13472288905443614721347228868562014208.jpg" />
+
+                  <h2 class="game-item-title">World of Peppa Pig: Kids Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72369.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14607095732912988161460709560590946304.jpg" />
+
+                  <h2 class="game-item-title">My Talking Tom Friends</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70287.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059643512990146561405964334043648000.jpg" />
+
+                  <h2 class="game-item-title">Five Nights at Freddy's: SL</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/169.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059427392332963841405942729502511104.jpg" />
+
+                  <h2 class="game-item-title">Candy Crush Saga</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70271.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059640356398899201405964022570438656.jpg" />
+
+                  <h2 class="game-item-title">Five Nights at Freddy's 4</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/31.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059355192506654721405935506613227520.jpg" />
+
+                  <h2 class="game-item-title">Paper.io 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/50.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059373526103040001405937329977839616.jpg" />
+
+                  <h2 class="game-item-title">My Talking Angela</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/19954.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059531779583713281405953172656771072.jpg" />
+
+                  <h2 class="game-item-title">Candy Crush Soda Saga</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72352.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14607039965069516801460703975254413312.jpg" />
+
+                  <h2 class="game-item-title">My Talking Angela 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/282.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059510401677598721405951018399322112.jpg" />
+
+                  <h2 class="game-item-title">Johnny Trigger: Action Shooter</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/46.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610381058548899841461038092386979840.jpg" />
+
+                  <h2 class="game-item-title">Hole.io</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20281.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059549411808583681405954928128184320.jpg" />
+
+                  <h2 class="game-item-title">8 Ball Pool</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20277.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059548341631918081405954828995809280.jpg" />
+
+                  <h2 class="game-item-title">Offroad Outlaws</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/178.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059430308087275521405943022298484736.jpg" />
+
+                  <h2 class="game-item-title">Ragdoll Playground</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70017.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613093670134947841461309344456527872.jpg" />
+
+                  <h2 class="game-item-title">Going Balls</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60798.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059605485081272321405960534520123392.jpg" />
+
+                  <h2 class="game-item-title">Airport Security</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/50006.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14607031474875473921460703130320261120.jpg" />
+
+                  <h2 class="game-item-title">Phone Case DIY</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/237.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610336362493583361461033631304273920.jpg" />
+
+                  <h2 class="game-item-title">Frozen Honey ASMR</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/271.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059501013650841601405950087884591104.jpg" />
+
+                  <h2 class="game-item-title">Monster Craftsman Survivor 3D</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/14.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059340309689999361405934013763964928.jpg" />
+
+                  <h2 class="game-item-title">Tiles Hop Music &amp; Ball Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72341.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059684864046080001405968481207865344.jpg" />
+
+                  <h2 class="game-item-title">Survivor.io</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70005.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059617673225379841405961754605408256.jpg" />
+
+                  <h2 class="game-item-title">Snake Run Race・3D Running Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059391956755619841405939177619083264.jpg" />
+
+                  <h2 class="game-item-title">Pixel Gun 3D - FPS Shooter</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72389.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610548318961868801461054826808496128.jpg" />
+
+                  <h2 class="game-item-title">Number Master: Run and merge</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/131.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613084509984727041461308438298120192.jpg" />
+
+                  <h2 class="game-item-title">Kick the Buddy: Second Kick</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/269.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613074481907179521461307425885409280.jpg" />
+
+                  <h2 class="game-item-title">Hit Master 3D - Knife Assassin</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72335.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059683078866411521405968286441164800.jpg" />
+
+                  <h2 class="game-item-title">Hide in The Backrooms: Horror</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/128.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059398116510474241405939793896558592.jpg" />
+
+                  <h2 class="game-item-title">Geometry Dash SubZero</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/290.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059516266321223681405951609016045568.jpg" />
+
+                  <h2 class="game-item-title">Fruit Ninja®</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72351.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610408452387184641461040835587624960.jpg" />
+
+                  <h2 class="game-item-title">DIY Makeup</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/137.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059406625998315521405940648720879616.jpg" />
+
+                  <h2 class="game-item-title">Bike Race: Racing Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70440.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059664177235435521405966399344103424.jpg" />
+
+                  <h2 class="game-item-title">Geometry Dash World</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/29012.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475429503006351361447542933292732416.jpg" />
+
+                  <h2 class="game-item-title">Skins Master for Roblox Shirts</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60064.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14609527814515793921460952759863496704.jpg" />
+
+                  <h2 class="game-item-title">Skins For Roblox Clothes</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70261.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059634874863001601405963470163824640.jpg" />
+
+                  <h2 class="game-item-title">Incredibox</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70448.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059666399251865601405966626398556160.jpg" />
+
+                  <h2 class="game-item-title">Bluey: Let's Play!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70454.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14631972300344729601463197217397035008.jpg" />
+
+                  <h2 class="game-item-title">Blood Strike - FPS for all</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70456.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059670200507637761405967010215120896.jpg" />
+
+                  <h2 class="game-item-title">Gangster Simulator Crime Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70481.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059674530203770881405967444401082368.jpg" />
+
+                  <h2 class="game-item-title">Survivalcraft</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/3.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059331416926658561405933137359949824.jpg" />
+
+                  <h2 class="game-item-title">Talking Tom Cat</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/6.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059334348283781121405933425370222592.jpg" />
+
+                  <h2 class="game-item-title">Plants vs. Zombies™ 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/12.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059339435848704001405933921162121216.jpg" />
+
+                  <h2 class="game-item-title">Smashing Four: PvP Hero bump</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/15.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059341260748431361405934104155410432.jpg" />
+
+                  <h2 class="game-item-title">Crowd City</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/16.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059341949411205121405934185482964992.jpg" />
+
+                  <h2 class="game-item-title">Mini Football - Soccer Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/17.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059342921063669761405934283659038720.jpg" />
+
+                  <h2 class="game-item-title">Mobile Legends: Adventure</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/19.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059344663419494401405934461593997312.jpg" />
+
+                  <h2 class="game-item-title">Pou</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059345707507589121405934565461741568.jpg" />
+
+                  <h2 class="game-item-title">Eternium</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/21.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059346820172554241405934671527301120.jpg" />
+
+                  <h2 class="game-item-title">RealmCraft: Block Craft World</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/22.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059347822191779841405934769493659648.jpg" />
+
+                  <h2 class="game-item-title">Swamp Attack</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/23.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059348871313039361405934865102819328.jpg" />
+
+                  <h2 class="game-item-title">SimCity BuildIt</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/24.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059349617437777921405934943859265536.jpg" />
+
+                  <h2 class="game-item-title">Asphalt Legends - Racing Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/26.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load" data-load="../../resc.pocketapk.com/images/26/logo_pad.jpg" />
+                  <h2 class="game-item-title">Far cry</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/32.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059356184040120321405935596673323008.jpg" />
+
+                  <h2 class="game-item-title">Madden NFL 26 Mobile Football</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/33.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059356792507801601405935674922258432.jpg" />
+
+                  <h2 class="game-item-title">AFK Arena</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/34.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059357613542809601405935748729425920.jpg" />
+
+                  <h2 class="game-item-title">TOY WARS</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/35.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059358494891909121405935827179687936.jpg" />
+
+                  <h2 class="game-item-title">Bubbu – My Virtual Pet Cat</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/36.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059359715895746561405935958209744896.jpg" />
+
+                  <h2 class="game-item-title">AnimA ARPG (Action RPG)</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/38.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059361926713384961405936174791020544.jpg" />
+
+                  <h2 class="game-item-title">Arknights</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/39.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059362671370117121405936261931880448.jpg" />
+
+                  <h2 class="game-item-title">Klondike Adventures: Farm Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/41.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059364661651251201405936448939118592.jpg" />
+
+                  <h2 class="game-item-title">Warface GO: FPS shooting games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/42.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059365627725291521405936553498923008.jpg" />
+
+                  <h2 class="game-item-title">Criminal Case</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/43.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059366738167275521405936655588282368.jpg" />
+
+                  <h2 class="game-item-title">Hyper Heroes: Marble-Like RPG</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/45.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059368735410954241405936868335964160.jpg" />
+
+                  <h2 class="game-item-title">Looper!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/47.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059370486197329921405937034640117760.jpg" />
+
+                  <h2 class="game-item-title">Bowling Crew — 3D bowling game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/48.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059371575374192641405937135219527680.jpg" />
+
+                  <h2 class="game-item-title">Art of War: Legions</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/49.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059372523706327041405937234544840704.jpg" />
+
+                  <h2 class="game-item-title">Jurassic World™: The Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/51.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059374507108802561405937441634406400.jpg" />
+
+                  <h2 class="game-item-title">ZENONIA® 5</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/53.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059376366989025281405937622727675904.jpg" />
+
+                  <h2 class="game-item-title">Bloons TD Battles</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/54.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059377360829358081405937730680672256.jpg" />
+
+                  <h2 class="game-item-title">Airport City transport manager</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/56.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059379769408430081405937959429623808.jpg" />
+
+                  <h2 class="game-item-title">Zooba: Fun Battle Royale Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/57.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059380780193751041405938068691243008.jpg" />
+
+                  <h2 class="game-item-title">The Survival Hunter Games 2</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/63.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059384066976194561405938401161138176.jpg" />
+
+                  <h2 class="game-item-title">Soccer Cup 2025: Football Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/64.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059385306225254401405938508380131328.jpg" />
+
+                  <h2 class="game-item-title">Idle Heroes - 9th Anniversary</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059389955820953601405938985817755648.jpg" />
+
+                  <h2 class="game-item-title">Hay Day</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/71.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059390974365736961405939075592638464.jpg" />
+
+                  <h2 class="game-item-title">CarX Highway Racing</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/73.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059393099032371201405939287853780992.jpg" />
+
+                  <h2 class="game-item-title">Cops N Robbers:Pixel Craft Gun</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/76.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059396112975339521405939594398683136.jpg" />
+
+                  <h2 class="game-item-title">slither.io</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/77.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059397195986575361405939706508234752.jpg" />
+
+                  <h2 class="game-item-title">Tennis Clash: Multiplayer Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/180.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14606997480041553921460699738940264448.jpg" />
+
+                  <h2 class="game-item-title">Count Masters: Stickman Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/190.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059438259481026561405943812673130496.jpg" />
+
+                  <h2 class="game-item-title">Sculpt People</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/270.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059500029960724481405949993328201728.jpg" />
+
+                  <h2 class="game-item-title">Nextbots backroom Meme Hunters</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/276.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610538400397598721461053835304390656.jpg" />
+
+                  <h2 class="game-item-title">Stealth Master: Assassin Ninja</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/278.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059505810340782081405950566832164864.jpg" />
+
+                  <h2 class="game-item-title">Hide and Go Seek: Monster Hunt</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/281.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14653203034455613441465320298206875648.jpg" />
+
+                  <h2 class="game-item-title">Super Goal: Fun Soccer Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20261.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059545391526256641405954517933641728.jpg" />
+
+                  <h2 class="game-item-title">Gacha Club</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20272.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059547389399080961405954716773011456.jpg" />
+
+                  <h2 class="game-item-title">Hello Neighbor</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20296.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059552146410905601405955197738045440.jpg" />
+
+                  <h2 class="game-item-title">Gacha Life</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20314.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059561479618109441405956125757165568.jpg" />
+
+                  <h2 class="game-item-title">TSM</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/20550.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059570283965521921405957011489312768.jpg" />
+
+                  <h2 class="game-item-title">MultiCraft — Build and Mine!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60010.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059576606794915841405957651095506944.jpg" />
+
+                  <h2 class="game-item-title">Love Tester - Find Real Love</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60065.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14607060809711820801460706072460939264.jpg" />
+
+                  <h2 class="game-item-title">Skin Maker &amp; 3D Editor</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60349.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059590289327595521405959019457826816.jpg" />
+
+                  <h2 class="game-item-title">The Sims™ FreePlay</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60664.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610372338506997761461037224065388544.jpg" />
+
+                  <h2 class="game-item-title">Foot Clinic - ASMR Feet Care</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/60681.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/20260121-080019849QBMM.jpg" />
+
+                  <h2 class="game-item-title">Bruno – My Talking Slime Pet</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70269.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475667320462581761447566718909698048.jpg" />
+
+                  <h2 class="game-item-title">Who's Your Daddy?!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70358.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059649136671006721405964900492791808.jpg" />
+
+                  <h2 class="game-item-title">Sonic Runners Adventure game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/70417.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059660424675532801405966028890591232.jpg" />
+
+                  <h2 class="game-item-title">FPS Commando Shooting Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72340.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610362759345807361461036258096205824.jpg" />
+
+                  <h2 class="game-item-title">Fashion Battle - Dress up game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72365.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059691716574126081405969157753294848.jpg" />
+
+                  <h2 class="game-item-title">Sonic Dash Endless Runner Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72373.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475649892038942721447564971331964928.jpg" />
+
+                  <h2 class="game-item-title">Kick the Buddy－Fun Action Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72374.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059695476348231681405969530731778048.jpg" />
+
+                  <h2 class="game-item-title">Web Master: Stickman Superhero</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72408.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14476492052539842561447649200015298560.jpg" />
+
+                  <h2 class="game-item-title">BGMI: Online Multiplayer Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72411.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059704256536453121405970402865991680.jpg" />
+
+                  <h2 class="game-item-title">Dream League Soccer 2025</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72413.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14490708526242406401449070848325079040.jpg" />
+
+                  <h2 class="game-item-title">Evony: The King's Return</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72415.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059708199433871361405970797688410112.jpg" />
+
+                  <h2 class="game-item-title">GIRLS' FRONTLINE 2: EXILIUM</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72419.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610472579268812801461047245314609152.jpg" />
+
+                  <h2 class="game-item-title">Last War:Survival Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72420.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059712282882416641405971210563112960.jpg" />
+
+                  <h2 class="game-item-title">League of Legends: Wild Rift</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72424.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059714235121213441405971406344835072.jpg" />
+
+                  <h2 class="game-item-title">Marvel Contest of Champions</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72425.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059715059973038081405971493263396864.jpg" />
+
+                  <h2 class="game-item-title">MementoMori: AFKRPG</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72426.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613048531496673281461304830479454208.jpg" />
+
+                  <h2 class="game-item-title">Pokémon TCG Pocket - Card Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72431.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059718353214709761405971821601902592.jpg" />
+
+                  <h2 class="game-item-title">The Sims™ FreePlay</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72432.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14475755548276367361447575545562419200.jpg" />
+
+                  <h2 class="game-item-title">Acrylic Nails!</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72433.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059719993523118081405971981606211584.jpg" />
+
+                  <h2 class="game-item-title">Makeup Stylist: Makeup Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72434.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059720776725504001405972065047695360.jpg" />
+
+                  <h2 class="game-item-title">Hair Tattoo: Barber Shop Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72437.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059721855039119361405972164305899520.jpg" />
+
+                  <h2 class="game-item-title">Monster DIY: Mix Beats</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72440.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613169595174297601461316941637111808.jpg" />
+
+                  <h2 class="game-item-title">Beatbox Survival: Mini Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72458.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14610399476660510721461039925478182912.jpg" />
+
+                  <h2 class="game-item-title">Fade Master 3D: Barber Shop</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72531.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059724585614909441405972436587532288.jpg" />
+
+                  <h2 class="game-item-title">Match Triple Life</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72532.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059725707591229441405972561187721216.jpg" />
+
+                  <h2 class="game-item-title">Dandy's Rooms</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72533.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/13475271420072632321347527119785840640.jpg" />
+
+                  <h2 class="game-item-title">Dandy Music World Box Mod</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72534.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059726413618421761405972632180510720.jpg" />
+
+                  <h2 class="game-item-title">LOVE TEST - match calculator</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72546.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14607086178246533121460708605065580544.jpg" />
+
+                  <h2 class="game-item-title">Mother Simulator: Family life</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72547.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14607012610867404801460701243055427584.jpg" />
+
+                  <h2 class="game-item-title">Fruit Hospital: ASMR Games</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72548.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059731204604108801405973106497572864.jpg" />
+
+                  <h2 class="game-item-title">Cooking Crush - Cooking Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72554.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059732050259681281405973195962077184.jpg" />
+
+                  <h2 class="game-item-title">BitLife - Life Simulator</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72555.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613057348091453441461305712583528448.jpg" />
+
+                  <h2 class="game-item-title">Decor Life - Home Design Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72556.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059733928427069441405973383124504576.jpg" />
+
+                  <h2 class="game-item-title">Which character are you? QUIZ</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72558.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14613065425817640961461306538270019584.jpg" />
+
+                  <h2 class="game-item-title">Annoying Uncle Punch Game</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="game-link" href="detail/72559.html">
+                <div class="relative" style="width: 100%; height: 100%">
+                  <img class="game-img lazy-load"
+                    data-load="https://gameapp.playgamedaily.com/apk-info-data/images/14059735603548200961405973543116230656.jpg" />
+
+                  <h2 class="game-item-title">456 Run Challenge: Clash 3D</h2>
+                  <div class="game-item-shadow"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="line"></div>
+    <div class="footer-content" style="max-width: 1030px">
+      <div class="links">
+        <a href="contact.html" title="About">Contact</a><a href="privacy.html" title="Privacy">Privacy Policy</a><a
+          href="../terms.html" title="Terms">Terms Of Services</a>
+      </div>
+      <p class="introduce">&copy; {{DOMAIN_NAME}}</p>
+    </div>
+  </footer>
+  <script src="../ads.js"></script>
+  <script type="text/javascript">
+    var viewHeight = document.documentElement.clientHeight
+    function debounce(e, t) {
+      var n = null
+      return function () {
+        ; (n && clearTimeout(n), (n = setTimeout(e, t)))
+      }
+    }
+    function lazyLoadImgs() {
+      let e = document.querySelectorAll('img[data-load]')
+      e.forEach(function (e) {
+        let t = e.parentElement.getBoundingClientRect()
+          ; (0 != t.top ||
+            0 != t.bottom ||
+            0 != t.left ||
+            0 != t.right ||
+            0 != t.width ||
+            0 != t.height ||
+            0 != t.x ||
+            0 != t.y) &&
+            !e.dataset.loaded &&
+            ((e.onload = function () {
+              this.style.display = 'block'
+              let e = this.parentElement.getElementsByClassName('loading-img')
+              e[0] && (e[0].style.display = 'none')
+            }),
+              t.bottom >= 0 &&
+              t.top < viewHeight &&
+              (e.setAttribute('src', e.dataset.load),
+                e.setAttribute('data-loaded', !0)))
+      })
+    }
+    ; (lazyLoadImgs(),
+      document.addEventListener('scroll', debounce(lazyLoadImgs, 100)),
+      document.addEventListener(
+        'resize',
+        debounce(() => {
+          ; ((viewHeight = document.documentElement.clientHeight),
+            lazyLoadImgs())
+        }, 200)
+      ))
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"version":"2024.11.0","token":"fff152d20a4c41109555c9c97abe9a90","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
+  <script>
+      (function () {
+
+        const domain = location.hostname.replace("www.", "");
+
+        const brand = domain
+          .split(".")[0]
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, l => l.toUpperCase());
+
+        const placeholder = "{{DOMAIN_NAME}}";
+
+        // replace text nodes
+        function replaceText(node) {
+          if (node.nodeType === 3) {
+            node.nodeValue = node.nodeValue.replaceAll(placeholder, brand);
+          }
+        }
+
+        // replace attributes
+        function replaceAttributes(el) {
+          for (const attr of el.attributes || []) {
+            if (attr.value.includes(placeholder)) {
+              attr.value = attr.value.replaceAll(placeholder, brand);
+            }
+          }
+        }
+
+        // scan whole page
+        document.querySelectorAll("*").forEach(el => {
+          replaceAttributes(el);
+          el.childNodes.forEach(replaceText);
+        });
+
+        // replace title
+        document.title = document.title.replaceAll(placeholder, brand);
+
+      })();
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"54820ecc58fb4549bc52d9889ef5ebdb","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from gameapp.playgamedaily.com/explore/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Apr 2026 04:14:33 GMT -->
+</html>
