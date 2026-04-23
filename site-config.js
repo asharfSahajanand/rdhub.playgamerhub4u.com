@@ -2,11 +2,11 @@
   const domain = location.hostname.replace("www.", "");
 
   const site = {
-        "d1": "/23330730517/gamenila.com_d1",
-        "d2": "/23330730517/gamenila.com_d2",
-        "d3": "/23330730517/gamenila.com_d3",
-        "reward": "/23330730517/gamenila.com_reward",
-        "inter": "/23330730517/gamenila.com_inter",
+        "d1": "/23330730517/playgamershub4u.com_d1",
+        "d2": "/23330730517/playgamershub4u.com_d2",
+        "d3": "/23330730517/playgamershub4u.com_d3",
+        "reward": "/23330730517/playgamershub4u.com_reward",
+        "inter": "/23330730517/playgamershub4u.com_inter",
         "gtag": "G-4R2W0RNNG5",
         "conversion": "AW-18079014570/upnmCNrBq5kcEKq936xD",
         "gam": "AW-18079014570"
